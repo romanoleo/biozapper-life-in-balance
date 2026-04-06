@@ -62,7 +62,7 @@
         .img-card { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.06); background: white; border: 1px solid var(--gray-light); }
         .img-card img { width: 100%; height: auto; display: block; object-fit: contain; }
 
-        /* --- HERO --- */
+        /* --- 1. HERO --- */
         .hero { 
             height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;
             background: linear-gradient(rgba(246, 241, 235, 0.75), rgba(246, 241, 235, 0.75)), 
@@ -81,13 +81,14 @@
         /* --- VIDEO MAESTRO --- */
         .video-box-large { width: 100%; max-width: 1000px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 24px; overflow: hidden; border: 6px solid var(--brand-gold); box-shadow: 0 30px 60px rgba(0,0,0,0.15); }
 
+        /* --- FRECUENCIAS --- */
+        .bar-bg { background: #e2e8f0; height: 30px; border-radius: 6px; overflow: hidden; margin-top: 5px; }
+        .bar-fill { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 15px; color: white; font-weight: 700; font-size: 11px; }
+
         /* --- TABLAS --- */
         table { width: 100%; border-collapse: collapse; margin-top: 30px; background: white; border-radius: 12px; overflow: hidden; }
         th { background: var(--brand-green); color: white; padding: 18px; text-align: left; }
         td { padding: 15px 18px; border-bottom: 1px solid var(--gray-light); font-size: 14px; }
-        .freq-bar { margin-bottom: 15px; }
-        .bar-bg { background: #e2e8f0; height: 30px; border-radius: 6px; overflow: hidden; margin-top: 5px; }
-        .bar-fill { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 15px; color: white; font-weight: 700; font-size: 11px; }
 
         /* --- PROTOCOLO 3X10 --- */
         .protocol-box { background: var(--brand-green); color: white; border-radius: 30px; padding: 60px 40px; position: relative; }
@@ -101,11 +102,14 @@
         .faq-item { background: var(--white); border-radius: 12px; margin-bottom: 12px; border: 1px solid var(--gray-light); overflow: hidden; transition: 0.3s; }
         .faq-question { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 500; color: var(--brand-green); text-align: left; }
         .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: all 0.4s ease; background: #fdfdfd; font-size: 15px; color: var(--text-muted); }
-        .active .faq-answer { padding: 20px 25px; max-height: 1200px; border-top: 1px solid var(--gray-light); }
+        .active .faq-answer { padding: 22px 25px; max-height: 1200px; border-top: 1px solid var(--gray-light); }
         .faq-icon { transition: 0.3s; color: var(--brand-gold); }
         .active .faq-icon { transform: rotate(45deg); }
 
-        /* --- SECCIÓN CLIENTES PREMIUM --- */
+        /* --- BOTÁNICA --- */
+        .recipe-box { background: white; padding: 25px; border-radius: 15px; border-left: 5px solid var(--brand-gold); margin-top: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        /* --- SECCIÓN CLIENTES PREMIUM (REDESIGN FINAL) --- */
         .client-section { background: linear-gradient(135deg, var(--brand-green-dark), #05140E); color: white; padding: 120px 0; position: relative; }
         #loginGate { max-width: 450px; margin: 40px auto; background: white; padding: 50px; border-radius: 24px; text-align: center; color: var(--text-dark); box-shadow: 0 30px 60px rgba(0,0,0,0.4); border-top: 5px solid var(--brand-gold); }
         #loginGate input { width: 100%; padding: 15px; border-radius: 50px; border: 1px solid #ddd; margin: 25px 0; outline: none; text-align: center; font-size: 18px; letter-spacing: 5px; }
@@ -155,7 +159,7 @@
         .contact-info { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
         .contact-link { text-decoration: none; color: var(--text-muted); font-size: 15px; display: flex; align-items: center; gap: 12px; transition: 0.3s; }
         .contact-link:hover { color: var(--brand-green); }
-        .legal { font-size: 11px; opacity: 0.5; max-width: 800px; margin: 40px auto 0; line-height: 1.6; padding: 0 20px; }
+        .legal { font-size: 11px; opacity: 0.5; max-width: 800px; margin: 40px auto 0; line-height: 1.6; }
 
         @media (max-width: 950px) {
             .grid-2, .grid-3, .protocol-steps { grid-template-columns: 1fr; }
@@ -221,8 +225,26 @@
         </div>
     </section>
 
-    <!-- 4. CIENCIA -->
-    <section class="bg-cream">
+    <!-- 4. PERSISTENCIA CIENTÍFICA (FLEMING) -->
+    <section class="bg-cream" style="text-align: center;">
+        <div class="container">
+            <span class="section-tag">Un poco de historia</span>
+            <h2 class="section-title">La Persistencia de la Ciencia</h2>
+            <div class="grid-2" style="margin-top: 40px; text-align: left;">
+                <div class="img-card" style="border-radius: 50%; border: 5px solid var(--brand-gold); width: 80%; margin: 0 auto;">
+                    <img src="https://assets-us-01.kc-usercontent.com/9dd25524-761a-000d-d79f-86a5086d4774/dfbb9434-c5ff-40a9-a05b-2775ad261662/fleming2.jpg?w=777&h=600&auto=format&q=75&fit=crop" alt="Alexander Fleming" style="object-fit: cover;">
+                </div>
+                <div>
+                    <h3>La Analogía de la Penicilina</h3>
+                    <p>Al igual que Alexander Fleming enfrentó el escepticismo en 1929 con la penicilina y tuvo que esperar 10 años para su validación, la terapia biofísica de la Dra. Clark abre hoy una nueva frontera.</p>
+                    <p>La ciencia disruptiva suele requerir tiempo para ser aceptada e implementada a nivel global. El Bio-Zapper es heredero de esa persistencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CIENCIA (HULDA CLARK) -->
+    <section>
         <div class="container grid-2">
             <div class="img-card" style="border-radius: 50%; width: 80%; margin: 0 auto; border: 5px solid var(--brand-gold);">
                 <img src="https://drclark.si/uploads/drclark/public/content/10-dr_hulda_regehr_clark.png" alt="Dra. Hulda Clark" style="object-fit: cover; height: 100%;">
@@ -230,17 +252,248 @@
             <div>
                 <span class="section-tag">Orígenes y Rigor</span>
                 <h2 class="section-title">El Legado de Hulda Clark</h2>
-                <p>Licenciada en Fisiología y doctora en Biofísica Celular por la Univ. de Minnesota. Su hallazgo fue disruptivo: todo organismo vivo emite una frecuencia eléctrica única. El Bio-Zapper permite su eliminación selectiva mediante resonancia molecular sin afectar las células humanas.</p>
+                <p>Licenciada en Fisiología y doctora en Biofísica Celular por la Univ. de Minnesota. Su hallazgo fue disruptivo: todo organismo vivo emite una frecuencia eléctrica única.</p>
+                <p>Mediante el <strong>Sincrómetro</strong>, identificó que los patógenos operan en un rango mucho más bajo (77-500 KHz) que el humano, permitiendo su eliminación selectiva mediante resonancia molecular sin afectar las células.</p>
             </div>
         </div>
     </section>
 
-    <!-- 5. BRECHA -->
-    <section>
+    <!-- 6. BRECHA FRECUENCIAL -->
+    <section class="bg-cream">
         <div class="container grid-2">
             <div>
                 <span class="section-tag">Física Aplicada</span>
                 <h2 class="section-title">La Brecha Frecuencial</h2>
                 <div style="margin-top: 30px;">
                     <div class="freq-bar"><span style="font-weight:700; font-size:11px;">PATÓGENOS (77 - 500 KHz)</span><div class="bar-bg"><div class="bar-fill" style="width: 20%; background: #ef4444;">ATAQUE</div></div></div>
-                    <div class="freq-bar"><span style="font-weight:700; font-size:11px;">INSECTOS (1
+                    <div class="freq-bar"><span style="font-weight:700; font-size:11px;">INSECTOS (1.000 - 1.500 KHz)</span><div class="bar-bg"><div class="bar-fill" style="width: 45%; background: var(--brand-gold);">SENSIBLE</div></div></div>
+                    <div class="freq-bar"><span style="font-weight:700; font-size:11px;">HUMANOS (1.520 - 9.460 KHz)</span><div class="bar-bg"><div class="bar-fill" style="width: 100%; background: var(--brand-green);">ZONA SEGURA</div></div></div>
+                </div>
+                <p style="margin-top: 20px; font-size: 14px;">El Bio-Zapper aprovecha esta diferencia para atacar con precisión a los invasores.</p>
+            </div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=1470&auto=format&fit=crop" alt="Laboratorio"></div>
+        </div>
+    </section>
+
+    <!-- 7. DIFERENCIAL -->
+    <section>
+        <div class="container grid-2">
+            <div>
+                <span class="section-tag">Tecnología Inteligente</span>
+                <h2 class="section-title">El Diferencial del B-Z30</h2>
+                <p>A diferencia de equipos básicos, el B-Z30 utiliza un <strong>microprocesador avanzado</strong> para asegurar una onda cuadrada siempre positiva (Offset Positivo mín. 0.25v). Además, es el único equipo calibrado específicamente para el <strong>campo magnético del hemisferio sur</strong>.</p>
+            </div>
+            <div class="img-card"><img src="https://i.ibb.co/DgLwKTkX/diferencial.jpg" alt="Diferencial B-Z30"></div>
+        </div>
+    </section>
+
+    <!-- 8. TIEMPOS -->
+    <section class="bg-cream">
+        <div class="container">
+            <span class="section-tag">Material de consulta</span>
+            <h2 class="section-title">Tiempos de referencia</h2>
+            <table>
+                <thead><tr><th>Organismo</th><th>Tiempo Estimado</th><th>Efecto Técnico</th></tr></thead>
+                <tbody>
+                    <tr><td>Virus y Bacterias</td><td>3 Minutos</td><td>Colapso de membrana por corriente positiva.</td></tr>
+                    <tr><td>Trematodos y Lombrices</td><td>5 Minutos</td><td>Interrupción de procesos biológicos internos.</td></tr>
+                    <tr><td>Ácaros</td><td>7 Minutos</td><td>Tiempo máximo sugerido por ronda activa.</td></tr>
+                    <tr><td>Sesión Completa (3x10)</td><td>70 Minutos</td><td>Barrido sistémico total incluyendo descansos.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 9. GUÍA DE USO CONSCIENTE -->
+    <section id="protocolo">
+        <div class="container">
+            <span class="section-tag">Manual Práctico</span>
+            <h2 class="section-title">Guía de Uso Consciente</h2>
+            
+            <div class="protocol-box">
+                <h3 style="color: white; margin-bottom: 20px;">Lógica del Triple Barrido</h3>
+                <p style="color: rgba(255,255,255,0.8); max-width: 850px; margin-bottom: 40px;">Es vital seguir los 3 pasos: al morir, los parásitos liberan bacterias, y estas a su vez liberan virus. Solo el ciclo completo garantiza que el sistema inmune limpie los residuos de forma segura.</p>
+                
+                <div class="protocol-steps">
+                    <div class="step"><div class="step-num">01</div><h4>Zapping (10m)</h4><p>Mata bacterias y parásitos adultos en sangre.</p></div>
+                    <div class="step"><div class="step-num">02</div><h4>Descanso (20m)</h4><p>Pausa para liberación de virus internos.</p></div>
+                    <div class="step"><div class="step-num">03</div><h4>Zapping (10m)</h4><p>Elimina virus y bacterias recién expuestos.</p></div>
+                    <div class="step"><div class="step-num">04</div><h4>Zapping (10m)*</h4><p>Barrido final de refuerzo para limpieza total.</p></div>
+                </div>
+            </div>
+
+            <div class="grid-2" style="margin-top: 80px;">
+                <div class="img-card" style="border:none; box-shadow:none; background:transparent;">
+                    <img src="https://res.cloudinary.com/dd0bec5hh/image/upload/Adobe_Express_file_d2cc192928.webp" alt="BioZapper B-Z30">
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 25px;">Reglas de Oro de Aplicación</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <i class="fa-solid fa-hand-holding" style="color: var(--brand-gold); font-size: 24px;"></i>
+                            <span><strong>Polaridad Correcta:</strong> Rojo en la mano derecha, Negro en la izquierda. Siga el flujo natural.</span>
+                        </li>
+                        <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <i class="fa-solid fa-droplet" style="color: var(--brand-gold); font-size: 24px;"></i>
+                            <span><strong>Conductividad:</strong> Envuelva los tubos con 3 vueltas de papel higiénico mojado. <strong>No use telas</strong> (aíslan la frecuencia).</span>
+                        </li>
+                        <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <i class="fa-solid fa-shoe-prints" style="color: var(--brand-gold); font-size: 24px;"></i>
+                            <span><strong>Pies:</strong> Para afecciones bajo el ombligo, apoye los pies sobre los tubos aislando el suelo con plástico.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ COMPLETA (17 PREGUNTAS) -->
+    <section id="faq" class="bg-cream">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Preguntas Frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item"><div class="faq-question"><span>¿Qué pasa si invierto los colores de los electrodos?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">No produce daño, pero la efectividad cae al 10-25% porque no respeta el flujo natural de energía corporal.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Puedo usar bolsitas de tela o paños?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">No se recomienda. En Argentina los hilos se mercerizan, actuando como aislantes que bloquean la transmisión. Use siempre papel higiénico.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Se pueden usar los electrodos desnudos?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">No. El papel mojado es indispensable para la conducción eléctrica eficiente hacia los tejidos del cuerpo.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Qué pasa si los electrodos se tocan entre sí mientras está encendido?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Se produce un cortocircuito accidental, pero el equipo tiene protección interna para evitar daños.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Lo pueden usar varias personas de la familia?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Sí, el dispositivo no genera acostumbramiento ni se modela para una sola persona. Toda la familia puede aprovecharlo.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Por qué Dra. Clark dice 7 min y el equipo marca 10?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Desde 2015 se unificó el chip internacionalmente y se extendió el tiempo óptimo a 10 minutos para asegurar profundidad.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Hace mal usarlo más de 10 minutos seguidos?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">No hace daño. El equipo cuenta con un auto-apagado a los 20 minutos de uso continuo por seguridad.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Destruye la flora intestinal benéfica?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">No. Los patógenos vibran a ~30 KHz, las bacterias buenas a más de 150.000 KHz. La onda es selectiva.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Se puede usar un transformador a 220V?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">No. Las subidas de tensión hogareñas pueden quemar el microprocesador. Use solo batería de 9V.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Se pueden usar baterías recargables?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Sí, es posible, pero tenga en cuenta que retienen menos carga con el tiempo.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Funciona el equipo si enciende la luz roja?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Si parpadean verde y roja juntas, sí. Si solo enciende la roja fija, debe cambiar la batería de inmediato.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Cuáles son las contraindicaciones absolutas?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Mujeres embarazadas y personas con marcapasos o cualquier implante electrónico interno.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Se puede usar en bebés y niños?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Se sugiere después de los 3 años. En niños siempre supervisar una correcta hidratación.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Sirve para los animales y mascotas?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Sí, funciona en cualquier mamífero. Humedezca bien la zona de contacto y asegure firmeza.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Puedo usarlo con prótesis de metal o clavos?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Sí. Una prótesis inamovible no impide el uso, solo se pierde un mínimo de efectividad local (5-10%).</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Lo puedo usar después de vacunarme?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Se recomienda esperar al menos 20 días para no interferir con la creación de anticuerpos naturales.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Por qué me irrita la piel al usarlo?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">Puede deberse a piel muy sensible o eliminación alta de toxinas. Use sesiones cortas de 1 a 3 minutos.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. SINERGIA BOTÁNICA (DETALLADA) -->
+    <section id="protocolos">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;"><span class="section-tag">Limpieza Profunda</span><h2 class="section-title" style="display: inline-block;">Sinergia Botánica Integral</h2></div>
+            
+            <div class="grid-2" style="margin-bottom: 80px;">
+                <div class="img-card"><img src="https://i.ibb.co/YFmr1mcS/par-free.jpg" alt="Set Par-Free"></div>
+                <div>
+                    <h3>Set PAR-FREE: Liberación</h3>
+                    <p>Previene la adhesión de parásitos y promueve el flujo de bilis.</p>
+                    <div class="recipe-box">
+                        <p><strong>Ritual:</strong> Mezclar Propóleos (5ml), Cocú (50g), PAR (30g), Hisopo (30g) y Jengibre (50g). Tomar con 2 Ajos 3 veces al día antes de comer.</p>
+                        <p style="margin-top:10px; font-size:14px; font-style:italic;"><strong>Batido:</strong> 1 remolacha pequeña, 2 zanahorias, 1 manzana verde, 1/2 limón y 1 vaso de agua.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div>
+                    <h3>Set D-TOX: Purificación</h3>
+                    <p>Limpieza de 16 días para depuración hepática sistémica.</p>
+                    <div class="recipe-box">
+                        <p><strong>Ritual:</strong> Mezclar Lapacho (10ml), Áloe (10ml), Cocú (50g) y DPS (30g). Tomar con 2 levaduras 3 veces al día lejos de comidas.</p>
+                        <p style="margin-top:10px; font-size:14px; font-style:italic;"><strong>Batido Verde:</strong> 1 taza de espinacas frescas, 1 manzana verde, 1 limón y un trozo de jengibre fresco.</p>
+                    </div>
+                </div>
+                <div class="img-card"><img src="https://i.ibb.co/wZgh2n3g/dtox.jpg" alt="Set D-Tox"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. PORTAL PREMIUM -->
+    <section id="area-clientes" class="client-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span class="section-tag" style="color:var(--brand-gold);">Contenido Privado</span>
+                <h2 class="section-title" style="color:white; display: inline-block;">Portal Premium de Usuarios</h2>
+                <p style="opacity:0.8; margin-top:10px;">Biblioteca técnica y videos detallados exclusivos para clientes.</p>
+            </div>
+            
+            <div id="loginGate">
+                <i class="fa-solid fa-lock" style="font-size:35px; color:var(--brand-gold); margin-bottom:15px;"></i>
+                <h3>Acceso Protegido</h3>
+                <input type="password" id="clientPass" placeholder="••••••••">
+                <button onclick="checkPass()" class="btn btn-primary" style="width:100%;">Entrar al Portal</button>
+            </div>
+            
+            <div id="premiumContent" class="hidden-content">
+                <div class="resource-grid">
+                    <div class="premium-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/Mhant_70eYY" frameborder="0"></iframe></div><h4>Roberto Papeschi: El Desarrollo</h4></div>
+                    <div class="premium-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/KMuSJX_vg_4" frameborder="0"></iframe></div><h4>Roberto Papeschi: Elección</h4></div>
+                    <div class="premium-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/u8FyLbII2cw" frameborder="0"></iframe></div><h4>Roberto Papeschi: Beneficios</h4></div>
+                    <div class="premium-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/PXmMGYDpRDE" frameborder="0"></iframe></div><h4>Roberto Papeschi: Usos</h4></div>
+                </div>
+                
+                <div class="pdf-list">
+                    <a href="https://drive.google.com/file/d/1_Dpn5nA5tn92rx1cOxV81F2KnxVdNq61/view" target="_blank" class="pdf-button"><i class="fa-solid fa-file-pdf"></i> Cura del Cáncer</a>
+                    <a href="https://drive.google.com/file/d/1zfptJBPeLcX1JAX3n3qQQAWTtUtAJu2g/view" target="_blank" class="pdf-button"><i class="fa-solid fa-file-pdf"></i> Cura de Enfermedades</a>
+                    <a href="https://drive.google.com/file/d/1VfQOT5FETAr7ckCeD7z1NuK3NbBUQGtl/view" target="_blank" class="pdf-button"><i class="fa-solid fa-file-pdf"></i> Programa Alcalinizante</a>
+                    <a href="https://drive.google.com/file/d/1UrdqPBU9GZ_Y0GTdI1RczOPgdLJ0UQcZ/view" target="_blank" class="pdf-button"><i class="fa-solid fa-file-pdf"></i> Manual BioZapper</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">LIFE IN BALANCE</div>
+            <div class="contact-info">
+                <a href="https://wa.me/5491126844157" target="_blank" class="contact-link"><i class="fa-brands fa-whatsapp"></i> +54 9 11 2684 4157</a>
+                <a href="mailto:info@lifeinbalance.com.ar" class="contact-link"><i class="fa-regular fa-envelope"></i> info@lifeinbalance.com.ar</a>
+                <a href="https://www.instagram.com/lifeinbalance.ok/" target="_blank" class="contact-link"><i class="fa-brands fa-instagram"></i> @lifeinbalance.ok</a>
+                <a href="https://www.lifeinbalance.com.ar" target="_blank" class="contact-link"><i class="fa-solid fa-globe"></i> lifeinbalance.com.ar</a>
+            </div>
+            <p class="legal">* Este dispositivo es un modulador bioenergético. No reemplaza tratamientos médicos convencionales. Consulte siempre a su profesional de la salud antes de iniciar cualquier terapia.</p>
+            <p style="font-size: 11px; opacity: 0.3; margin-top: 30px;">© 2026 Life in Balance - Facilitando la Transformación Integral.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(h => h.addEventListener('click', () => h.parentElement.classList.toggle('active')));
+        const chatTrigger = document.getElementById('chatTrigger');
+        const chatWindow = document.getElementById('chatWindow');
+        const chatClose = document.getElementById('chatClose');
+        chatTrigger.addEventListener('click', () => chatWindow.classList.add('active'));
+        chatClose.addEventListener('click', () => chatWindow.classList.remove('active'));
+
+        function checkPass() {
+            const pass = document.getElementById('clientPass').value;
+            if(pass === "lifeinbalance") {
+                document.getElementById('loginGate').style.display = 'none';
+                const premium = document.getElementById('premiumContent');
+                premium.style.setProperty('display', 'block', 'important');
+                premium.scrollIntoView({ behavior: 'smooth' });
+            } else { alert("Clave incorrecta"); }
+        }
+
+        const btn = document.getElementById('sendBtn');
+        const input = document.getElementById('userInput');
+        const win = document.getElementById('chatMsgs');
+        async function handleChat() {
+            const prompt = input.value.trim();
+            if(!prompt) return;
+            const uMsg = document.createElement('div'); uMsg.className = 'bubble user'; uMsg.textContent = prompt;
+            win.appendChild(uMsg); input.value = ''; win.scrollTop = win.scrollHeight;
+            const aiMsg = document.createElement('div'); aiMsg.className = 'bubble ai'; aiMsg.textContent = 'Procesando...';
+            win.appendChild(aiMsg);
+            try {
+                const res = await fetch('https://jvcvdrdfmmbbkkyjxqzd.supabase.co/functions/v1/consultar-gemini', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp2Y3ZkcmRmbW1iYmtreWp4cXpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNDk4MTQsImV4cCI6MjA5MDcyNTgxNH0.42TmIt_4fjFdhaNLIme-mFYW9ihTLP5bO55iSMWRPtk', 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp2Y3ZkcmRmbW1iYmtreWp4cXpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNDk4MTQsImV4cCI6MjA5MDcyNTgxNH0.42TmIt_4fjFdhaNLIme-mFYW9ihTLP5bO55iSMWRPtk' },
+                    body: JSON.stringify({ prompt })
+                });
+                const d = await res.json();
+                aiMsg.innerHTML = (d.text || "Sin respuesta.").replace(/\n/g, '<br>');
+            } catch (e) { aiMsg.textContent = 'Error de conexión.'; }
+            win.scrollTop = win.scrollHeight;
+        }
+        btn.addEventListener('click', handleChat);
+        input.addEventListener('keypress', e => { if(e.key === 'Enter') handleChat(); });
+    </script>
+</body>
+</html>
