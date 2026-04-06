@@ -50,6 +50,7 @@
         }
         .btn-primary { background: var(--brand-green); color: white; border: 2px solid var(--brand-green); }
         .btn-primary:hover { background: transparent; color: var(--brand-green); }
+        
         .btn-outline { border: 2px solid var(--brand-gold); color: var(--brand-gold); margin-left: 10px; }
         .btn-outline:hover { background: var(--brand-gold); color: white; }
 
@@ -59,7 +60,7 @@
         .img-card { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.06); background: white; border: 1px solid var(--gray-light); }
         .img-card img { width: 100%; height: auto; display: block; object-fit: contain; }
 
-        /* --- HERO --- */
+        /* --- 1. HERO --- */
         .hero { 
             height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;
             background: linear-gradient(rgba(246, 241, 235, 0.6), rgba(246, 241, 235, 0.6)), 
@@ -93,17 +94,19 @@
         .faq-item { background: var(--white); border-radius: 12px; margin-bottom: 12px; border: 1px solid var(--gray-light); overflow: hidden; transition: 0.3s; }
         .faq-question { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 500; color: var(--brand-green); text-align: left; }
         .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: all 0.4s ease; background: #fdfdfd; font-size: 15px; color: var(--text-muted); }
-        .active .faq-answer { padding: 20px 25px; max-height: 800px; border-top: 1px solid var(--gray-light); }
+        .active .faq-answer { padding: 22px 25px; max-height: 800px; border-top: 1px solid var(--gray-light); }
         .faq-icon { transition: 0.3s; color: var(--brand-gold); }
         .active .faq-icon { transform: rotate(45deg); }
 
         /* --- ÁREA CLIENTES --- */
         .client-section { background-color: var(--brand-green); color: white; padding: 100px 0; }
         #loginGate { max-width: 450px; margin: 40px auto; background: white; padding: 40px; border-radius: 20px; text-align: center; color: var(--text-dark); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
-        #loginGate input { width: 100%; padding: 14px; border-radius: 50px; border: 1px solid #ddd; margin: 20px 0; outline: none; text-align: center; }
+        #loginGate input { width: 100%; padding: 14px; border-radius: 50px; border: 1px solid #ddd; margin: 25px 0; outline: none; text-align: center; }
         .hidden-content { display: none; }
-        .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 50px; }
-        .video-thumb { width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 12px; margin-bottom: 20px; border: 2px solid var(--brand-gold); overflow: hidden; }
+        .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 50px; }
+        .resource-card { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); padding: 30px; border-radius: 20px; text-align: center; }
+        .resource-card i { font-size: 40px; color: var(--brand-gold); margin-bottom: 20px; }
+        .video-thumb { width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 12px; margin-bottom: 15px; border: 2px solid var(--brand-gold); overflow: hidden; }
 
         /* --- WIDGETS FLOTANTES --- */
         .floating-widget { position: fixed; bottom: 30px; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s; text-decoration: none; color: white; }
@@ -130,7 +133,7 @@
             box-shadow: 0 30px 60px rgba(0,0,0,0.2); 
         }
 
-        /* --- FOOTER ARREGLADO --- */
+        /* --- FOOTER --- */
         footer { padding: 100px 0 60px; text-align: center; background: var(--white); border-top: 1px solid var(--gray-light); }
         .footer-logo { font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: 6px; color: var(--brand-green); margin-bottom: 40px; font-size: 26px; }
         .contact-info { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
@@ -297,14 +300,20 @@
         <div class="container">
             <div style="text-align: center; margin-bottom: 50px;"><span class="section-tag" style="color:white;">Próximo nivel de estudio</span><h2 class="section-title" style="color:white; display: inline-block;">Portal para Clientes</h2></div>
             <div id="loginGate"><h3>Acceso exclusivo</h3><input type="password" id="clientPass" placeholder="••••••••"><button onclick="checkPass()" class="btn btn-primary" style="width:100%;">Entrar</button></div>
+            
             <div id="premiumContent" class="hidden-content">
                 <div class="resource-grid">
-                    <div class="resource-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/Mhant_70eYY" frameborder="0"></iframe></div><h4>Roberto Papeschi</h4></div>
-                    <div class="resource-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/KMuSJX_vg_4" frameborder="0"></iframe></div><h4>Elección del BioZapper</h4></div>
+                    <div class="resource-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/Mhant_70eYY" frameborder="0"></iframe></div><h4>Roberto Papeschi: Desarrollo</h4></div>
+                    <div class="resource-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/KMuSJX_vg_4" frameborder="0"></iframe></div><h4>Por qué BioZapper</h4></div>
+                    <div class="resource-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/u8FyLbII2cw" frameborder="0"></iframe></div><h4>Beneficios Detallados</h4></div>
+                    <div class="resource-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/PXmMGYDpRDE" frameborder="0"></iframe></div><h4>Usos Exclusivos</h4></div>
                 </div>
-                <div style="margin-top:40px; display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
-                    <a href="https://drive.google.com/file/d/1UrdqPBU9GZ_Y0GTdI1RczOPgdLJ0UQcZ/view" target="_blank" class="btn btn-outline" style="color:white; border-color:white;">📥 Manual de Instrucciones</a>
-                    <a href="https://drive.google.com/file/d/1VfQOT5FETAr7ckCeD7z1NuK3NbBUQGtl/view" target="_blank" class="btn btn-outline" style="color:white; border-color:white;">📥 Programa Alcalinizante</a>
+                
+                <div style="margin-top:40px; display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:15px; justify-content:center;">
+                    <a href="https://drive.google.com/file/d/1_Dpn5nA5tn92rx1cOxV81F2KnxVdNq61/view" target="_blank" class="btn btn-outline" style="color:white; border-color:white; margin:0; font-size:11px;">📥 Cura Cáncer PDF</a>
+                    <a href="https://drive.google.com/file/d/1zfptJBPeLcX1JAX3n3qQQAWTtUtAJu2g/view" target="_blank" class="btn btn-outline" style="color:white; border-color:white; margin:0; font-size:11px;">📥 La Cura Enfermedades PDF</a>
+                    <a href="https://drive.google.com/file/d/1VfQOT5FETAr7ckCeD7z1NuK3NbBUQGtl/view" target="_blank" class="btn btn-outline" style="color:white; border-color:white; margin:0; font-size:11px;">📥 Programa Alcalinizante PDF</a>
+                    <a href="https://drive.google.com/file/d/1UrdqPBU9GZ_Y0GTdI1RczOPgdLJ0UQcZ/view" target="_blank" class="btn btn-outline" style="color:white; border-color:white; margin:0; font-size:11px;">📥 Manual Instrucciones PDF</a>
                 </div>
             </div>
         </div>
