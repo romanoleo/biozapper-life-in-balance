@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life in Balance - Bio-Zapper B-Z30 | Bienestar Real</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --brand-green: #1D7050;
+            --brand-gold: #C8A75E;
+            --bg-cream: #F6F1EB;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --text-muted: #6E6E6E;
+            --soft-green: #8FAF9E;
+            --gray-light: #F2F2F2;
+            --whatsapp-color: #25D366;
+        }
+
+        /* --- BASE --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { 
+            background-color: var(--white); 
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Merriweather', serif; color: var(--brand-green); line-height: 1.2; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
+        section { padding: 90px 0; border-bottom: 1px solid var(--gray-light); }
+        .bg-cream { background-color: var(--bg-cream); }
+        .section-tag { color: var(--brand-gold); font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; margin-bottom: 15px; display: block; }
+        .section-title { font-size: clamp(28px, 5vw, 42px); margin-bottom: 25px; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--brand-gold); margin-top: 15px; }
+
+        /* --- BOTONES --- */
+        .btn { 
+            display: inline-block; padding: 16px 32px; border-radius: 50px; 
+            text-decoration: none; font-weight: 700; transition: 0.3s;
+            font-size: 13px; text-transform: uppercase; letter-spacing: 1px;
+            cursor: pointer; border: none;
+        }
+        .btn-primary { background: var(--brand-green); color: white; border: 2px solid var(--brand-green); }
+        .btn-primary:hover { background: transparent; color: var(--brand-green); }
+        .btn-outline { border: 2px solid var(--brand-gold); color: var(--brand-gold); margin-left: 10px; }
+        .btn-outline:hover { background: var(--brand-gold); color: white; }
+
+        /* --- GRID LAYOUTS --- */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .img-card { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.06); background: white; border: 1px solid var(--gray-light); }
+        .img-card img { width: 100%; height: auto; display: block; object-fit: contain; }
+
+        /* --- HERO --- */
+        .hero { 
+            height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;
+            background: linear-gradient(rgba(246, 241, 235, 0.6), rgba(246, 241, 235, 0.6)), 
+                        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover; background-position: center;
+        }
+        .hero-logo { font-weight: 700; letter-spacing: 10px; color: var(--brand-green); margin-bottom: 20px; font-size: 18px; }
+        .hero h1 { font-size: clamp(35px, 7vw, 80px); margin-bottom: 20px; }
+        .hero .intro-line { font-size: 16px; color: var(--text-muted); font-weight: 400; max-width: 650px; margin: 0 auto 40px; }
+
+        /* --- RECORRIDO --- */
+        .nav-card { background: var(--bg-cream); padding: 35px; border-radius: 20px; text-align: center; border-bottom: 4px solid var(--brand-gold); }
+        .nav-card i { font-size: 30px; color: var(--brand-green); margin-bottom: 15px; }
+
+        /* --- FRECUENCIAS --- */
+        .bar-bg { background: #e2e8f0; height: 32px; border-radius: 6px; overflow: hidden; margin-top: 5px; }
+        .bar-fill { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 15px; color: white; font-weight: 700; font-size: 11px; }
+
+        /* --- TABLAS --- */
+        table { width: 100%; border-collapse: collapse; margin-top: 30px; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        th { background: var(--brand-green); color: white; padding: 18px; text-align: left; font-size: 15px; }
+        td { padding: 15px 18px; border-bottom: 1px solid var(--gray-light); font-size: 14px; }
+
+        /* --- PROTOCOLO --- */
+        .protocol-box { background: var(--brand-green); color: white; border-radius: 30px; padding: 60px 40px; }
+        .protocol-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; margin-top: 40px; }
+        .step-num { width: 45px; height: 45px; border: 2px solid var(--brand-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; font-weight: 700; color: var(--brand-gold); }
+
+        /* --- FAQ --- */
+        .faq-list { max-width: 900px; margin: 0 auto; }
+        .faq-item { background: var(--white); border-radius: 12px; margin-bottom: 12px; border: 1px solid var(--gray-light); overflow: hidden; transition: 0.3s; }
+        .faq-question { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 500; color: var(--brand-green); text-align: left; }
+        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: all 0.4s ease; background: #fdfdfd; font-size: 15px; color: var(--text-muted); }
+        .active .faq-answer { padding: 20px 25px; max-height: 800px; border-top: 1px solid var(--gray-light); }
+        .faq-icon { transition: 0.3s; color: var(--brand-gold); }
+        .active .faq-icon { transform: rotate(45deg); }
+
+        /* --- ÁREA CLIENTES --- */
+        .client-section { background-color: var(--brand-green); color: white; padding: 100px 0; }
+        #loginGate { max-width: 450px; margin: 40px auto; background: white; padding: 40px; border-radius: 20px; text-align: center; color: var(--text-dark); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        #loginGate input { width: 100%; padding: 14px; border-radius: 50px; border: 1px solid #ddd; margin: 20px 0; outline: none; text-align: center; }
+        .hidden-content { display: none; }
+        .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 50px; }
+        .video-thumb { width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 12px; margin-bottom: 20px; border: 2px solid var(--brand-gold); overflow: hidden; }
+
+        /* --- WIDGETS FLOTANTES --- */
+        .floating-widget { position: fixed; bottom: 30px; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s; text-decoration: none; color: white; }
+        .floating-widget:hover { transform: scale(1.1); }
+        .chat-trigger { right: 30px; background: var(--brand-green); border: 2px solid var(--brand-gold); }
+        .whatsapp-trigger { left: 30px; background: var(--whatsapp-color); border: 2px solid white; }
+        .chat-widget-window { position: fixed; bottom: 100px; right: 30px; width: 350px; height: 500px; background: white; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.15); z-index: 1001; opacity: 0; visibility: hidden; transition: 0.3s; border: 1px solid var(--gray-light); color: var(--text-dark); }
+        .chat-widget-window.active { opacity: 1; visibility: visible; }
+        .chat-header { background: var(--brand-green); color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .chat-msgs { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+        .bubble { padding: 10px 15px; border-radius: 15px; max-width: 85%; font-size: 14px; }
+        .ai { background: var(--bg-cream); color: var(--brand-green); align-self: flex-start; }
+        .user { background: var(--brand-green); color: white; align-self: flex-end; }
+
+        /* --- INTERACTIVO (Video Grande) --- */
+        .video-box-large { 
+            width: 100%; 
+            max-width: 1000px; 
+            margin: 40px auto 0; 
+            aspect-ratio: 16/9; 
+            border-radius: 24px; 
+            overflow: hidden; 
+            border: 6px solid var(--brand-gold); 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2); 
+        }
+
+        /* --- FOOTER ARREGLADO --- */
+        footer { padding: 100px 0 60px; text-align: center; background: var(--white); border-top: 1px solid var(--gray-light); }
+        .footer-logo { font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: 6px; color: var(--brand-green); margin-bottom: 40px; font-size: 26px; }
+        .contact-info { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
+        .contact-link { text-decoration: none; color: var(--text-muted); font-size: 15px; display: flex; align-items: center; gap: 12px; transition: 0.3s; font-weight: 400; }
+        .contact-link:hover { color: var(--brand-green); }
+        .contact-link i { color: var(--brand-gold); font-size: 20px; }
+        .legal { font-size: 11px; opacity: 0.5; max-width: 800px; margin: 40px auto 0; line-height: 1.6; padding: 0 20px; }
+
+        @media (max-width: 950px) {
+            .grid-2, .grid-3, .protocol-steps { grid-template-columns: 1fr; }
+            .hero { height: auto; padding: 120px 0; }
+            .contact-info { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/5491126844157?text=Hola,%20vengo%20de%20la%20página%20del%20biozapper,%20tengo%20una%20duda" target="_blank" class="floating-widget whatsapp-trigger"><i class="fa-brands fa-whatsapp"></i></a>
+    <div class="floating-widget chat-trigger" id="chatTrigger"><i class="fa-solid fa-comment-dots"></i></div>
+
+    <div class="chat-widget-window" id="chatWindow">
+        <div class="chat-header"><span><i class="fa-solid fa-robot"></i> Asesor Oficial IA</span><i class="fa-solid fa-xmark" id="chatClose" style="cursor:pointer;"></i></div>
+        <div class="chat-msgs" id="chatMsgs"><div class="bubble ai">¡Hola! Soy tu guía experto. ¿Qué duda técnica puedo aclararte hoy?</div></div>
+        <div style="padding:15px; border-top:1px solid #eee; display:flex; gap:10px;">
+            <input type="text" id="userInput" placeholder="Escribe tu duda..." style="flex:1; padding:10px; border-radius:20px; border:1px solid #ddd; outline:none; font-size:13px;">
+            <button id="sendBtn" style="background:var(--brand-gold); border:none; color:white; width:35px; height:35px; border-radius:50%; cursor:pointer;"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-logo">LIFE IN BALANCE</div>
+            <h1>Bienestar Real, Vida Consciente.</h1>
+            <h3 style="font-weight: 300; font-style: italic; color: var(--brand-green); font-size: 22px; margin-bottom: 20px;">Restaurando el equilibrio sistémico a través de la frecuencia y la vibración.</h3>
+            <p class="intro-line">Una página de introducción y capacitación para entender el Bio-Zapper B-Z30, su lógica de uso y los materiales de estudio disponibles.</p>
+            <div class="hero-actions">
+                <a href="#que-encontraras" class="btn btn-primary">Descubrir Guía</a>
+                <a href="#area-clientes" class="btn btn-outline">Acceso Clientes</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="que-encontraras" class="bg-cream">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span class="section-tag">Contenido de la página</span>
+                <h2 class="section-title">Tu recorrido educativo</h2>
+            </div>
+            <div class="grid-3">
+                <div class="nav-card"><i class="fa-solid fa-microscope"></i><h4>Introducción Conceptual</h4><p style="font-size: 14px;">Fundamentos de la bio-resonancia y el legado de Hulda Clark.</p></div>
+                <div class="nav-card"><i class="fa-solid fa-hand-holding-medical"></i><h4>Guía Práctica de Uso</h4><p style="font-size: 14px;">Protocolo 3x7, preparación de electrodos y reglas de oro.</p></div>
+                <div class="nav-card"><i class="fa-solid fa-graduation-cap"></i><h4>Portal para Clientes</h4><p style="font-size: 14px;">Acceso a materiales exclusivos, videos y biblioteca PDF.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container" style="text-align: center;">
+            <span class="section-tag">Resumen guiado</span>
+            <h2 class="section-title">Análisis de NotebookLM</h2>
+            <p style="max-width: 750px; margin: 0 auto 40px; color: var(--text-muted);">Si preferís una introducción más simple, escuchá este resumen generado con IA sobre los fundamentos presentados en esta página.</p>
+            <div class="video-box-large">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/u_YEv6HoZ9M" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-cream">
+        <div class="container grid-2">
+            <div class="img-card" style="border-radius: 50%; width: 85%; margin: 0 auto; border: 5px solid var(--brand-gold);">
+                <img src="https://drclark.si/uploads/drclark/public/content/10-dr_hulda_regehr_clark.png" alt="Dra. Hulda Clark" style="object-fit: cover; height: 100%;">
+            </div>
+            <div>
+                <span class="section-tag">Base Científica</span>
+                <h2 class="section-title">El Legado de Hulda Clark</h2>
+                <p>Licenciada en Fisiología y Biología (Univ. Saskatchewan) y doctora en Fisiología (Univ. Minnesota) especializada en Biofísica Celular.</p>
+                <p>Mediante el <strong>Sincrómetro</strong>, identificó que mientras el humano vibra en frecuencias altas, los patógenos operan en una banda baja, permitiendo su eliminación selectiva.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container grid-2">
+            <div>
+                <span class="section-tag">Física Aplicada</span>
+                <h2 class="section-title">La Brecha Frecuencial</h2>
+                <p>Cómo se presenta el principio de funcionamiento dentro de este enfoque:</p>
+                <div style="margin-top: 30px;">
+                    <div class="freq-bar"><span style="font-weight:700; font-size:11px;">PATÓGENOS (77 - 500 KHz)</span><div class="bar-bg"><div class="bar-fill" style="width: 20%; background: #ef4444;">ATAQUE</div></div></div>
+                    <div class="freq-bar"><span style="font-weight:700; font-size:11px;">INSECTOS (1.000 - 1.500 KHz)</span><div class="bar-bg"><div class="bar-fill" style="width: 45%; background: var(--brand-gold);">SENSIBLE</div></div></div>
+                    <div class="freq-bar"><span style="font-weight:700; font-size:11px;">HUMANOS (1.520 - 9.460 KHz)</span><div class="bar-bg"><div class="bar-fill" style="width: 100%; background: var(--brand-green);">ZONA SEGURA</div></div></div>
+                </div>
+            </div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=1470&auto=format&fit=crop" alt="Laboratorio"></div>
+        </div>
+    </section>
+
+    <section class="bg-cream">
+        <div class="container grid-2">
+            <div>
+                <span class="section-tag">Tecnología Inteligente</span>
+                <h2 class="section-title">El Diferencial del B-Z30</h2>
+                <p>Equipado con un <strong>microprocesador avanzado</strong> que asegura una onda cuadrada positiva (Offset Positivo mín. 0.25v) y calibrado para el <strong>hemisferio sur</strong>.</p>
+            </div>
+            <div class="img-card"><img src="https://i.ibb.co/DgLwKTkX/diferencial.jpg" alt="Diferencial B-Z30"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <span class="section-tag">Material de estudio</span>
+            <h2 class="section-title">Tiempos de referencia</h2>
+            <table>
+                <thead><tr><th>Organismo</th><th>Tiempo Estimado</th><th>Efecto Técnico</th></tr></thead>
+                <tbody>
+                    <tr><td>Virus y Bacterias</td><td>3 Minutos</td><td>Colapso de membrana por corriente positiva.</td></tr>
+                    <tr><td>Trematodos y Lombrices</td><td>5 Minutos</td><td>Interrupción de procesos biológicos.</td></tr>
+                    <tr><td>Ácaros</td><td>7 Minutos</td><td>Tiempo máximo sugerido por ronda.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="protocolo" class="bg-cream">
+        <div class="container">
+            <div class="protocol-box">
+                <h2 class="section-title" style="color: white;">Guía de Uso Consciente</h2>
+                <div class="protocol-steps">
+                    <div class="step"><div class="step-num">01</div><h4>Zapping (10m)</h4></div>
+                    <div class="step"><div class="step-num">02</div><h4>Pausa (20m)</h4></div>
+                    <div class="step"><div class="step-num">03</div><h4>Zapping (10m)</h4></div>
+                    <div class="step"><div class="step-num">04</div><h4>Final (10m)</h4></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Preguntas Frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item"><div class="faq-question"><span>¿Qué pasa si invierto los colores de los electrodos?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">No produce daño, pero la efectividad cae drásticamente porque no respeta el flujo natural de energía.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Se pueden usar los electrodos desnudos?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">No. El papel mojado es indispensable para la conducción eléctrica eficiente.</div></div>
+                <div class="faq-item"><div class="faq-question"><span>¿Destruye bacterias buenas?</span><i class="fa-solid fa-plus faq-icon"></i></div><div class="faq-answer">No. Funciona por resonancia selectiva: los patógenos vibran a frecuencias mucho más bajas que las bacterias benéficas.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="protocolos" class="bg-cream">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;"><span class="section-tag">Material complementario</span><h2 class="section-title" style="display: inline-block;">Sinergia Botánica</h2></div>
+            <div class="grid-2" style="margin-bottom: 60px;">
+                <div class="img-card"><img src="https://i.ibb.co/YFmr1mcS/par-free.jpg" alt="Set Par-Free"></div>
+                <div><h3>Set PAR-FREE</h3><p>Previene adhesión de parásitos y promueve el flujo de bilis.</p></div>
+            </div>
+            <div class="grid-2">
+                <div><h3>Set D-TOX</h3><p>Limpieza de 16 días para depuración hepática sistémica.</p></div>
+                <div class="img-card"><img src="https://i.ibb.co/wZgh2n3g/dtox.jpg" alt="Set D-Tox"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="area-clientes" class="client-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;"><span class="section-tag" style="color:white;">Próximo nivel de estudio</span><h2 class="section-title" style="color:white; display: inline-block;">Portal para Clientes</h2></div>
+            <div id="loginGate"><h3>Acceso exclusivo</h3><input type="password" id="clientPass" placeholder="••••••••"><button onclick="checkPass()" class="btn btn-primary" style="width:100%;">Entrar</button></div>
+            <div id="premiumContent" class="hidden-content">
+                <div class="resource-grid">
+                    <div class="resource-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/Mhant_70eYY" frameborder="0"></iframe></div><h4>Roberto Papeschi</h4></div>
+                    <div class="resource-card"><div class="video-thumb"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/KMuSJX_vg_4" frameborder="0"></iframe></div><h4>Elección del BioZapper</h4></div>
+                </div>
+                <div style="margin-top:40px; display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
+                    <a href="https://drive.google.com/file/d/1UrdqPBU9GZ_Y0GTdI1RczOPgdLJ0UQcZ/view" target="_blank" class="btn btn-outline" style="color:white; border-color:white;">📥 Manual de Instrucciones</a>
+                    <a href="https://drive.google.com/file/d/1VfQOT5FETAr7ckCeD7z1NuK3NbBUQGtl/view" target="_blank" class="btn btn-outline" style="color:white; border-color:white;">📥 Programa Alcalinizante</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">LIFE IN BALANCE</div>
+            <div class="contact-info">
+                <a href="https://wa.me/5491126844157" target="_blank" class="contact-link"><i class="fa-brands fa-whatsapp"></i> +54 9 11 2684 4157</a>
+                <a href="mailto:info@lifeinbalance.com.ar" class="contact-link"><i class="fa-regular fa-envelope"></i> info@lifeinbalance.com.ar</a>
+                <a href="https://www.instagram.com/lifeinbalance.ok/" target="_blank" class="contact-link"><i class="fa-brands fa-instagram"></i> @lifeinbalance.ok</a>
+                <a href="https://www.lifeinbalance.com.ar" target="_blank" class="contact-link"><i class="fa-solid fa-globe"></i> lifeinbalance.com.ar</a>
+            </div>
+            <p class="legal">* Este dispositivo es un modulador bioenergético. No reemplaza tratamientos médicos convencionales. Consulte siempre a su profesional de la salud antes de iniciar cualquier terapia.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(h => h.addEventListener('click', () => h.parentElement.classList.toggle('active')));
+        const chatTrigger = document.getElementById('chatTrigger');
+        const chatWindow = document.getElementById('chatWindow');
+        const chatClose = document.getElementById('chatClose');
+        chatTrigger.addEventListener('click', () => chatWindow.classList.add('active'));
+        chatClose.addEventListener('click', () => chatWindow.classList.remove('active'));
+
+        function checkPass() {
+            if(document.getElementById('clientPass').value === "lifeinbalance") {
+                document.getElementById('loginGate').style.display = 'none';
+                document.getElementById('premiumContent').style.display = 'block';
+                document.getElementById('premiumContent').scrollIntoView({ behavior: 'smooth' });
+            } else { alert("Clave incorrecta"); }
+        }
+
+        const btn = document.getElementById('sendBtn');
+        const input = document.getElementById('userInput');
+        const win = document.getElementById('chatMsgs');
+        async function handleChat() {
+            const prompt = input.value.trim();
+            if(!prompt) return;
+            const uMsg = document.createElement('div'); uMsg.className = 'bubble user'; uMsg.textContent = prompt;
+            win.appendChild(uMsg); input.value = ''; win.scrollTop = win.scrollHeight;
+            const aiMsg = document.createElement('div'); aiMsg.className = 'bubble ai'; aiMsg.textContent = 'Procesando...';
+            win.appendChild(aiMsg);
+            try {
+                const res = await fetch('https://jvcvdrdfmmbbkkyjxqzd.supabase.co/functions/v1/consultar-gemini', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp2Y3ZkcmRmbW1iYmtreWp4cXpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNDk4MTQsImV4cCI6MjA5MDcyNTgxNH0.42TmIt_4fjFdhaNLIme-mFYW9ihTLP5bO55iSMWRPtk', 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp2Y3ZkcmRmbW1iYmtreWp4cXpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNDk4MTQsImV4cCI6MjA5MDcyNTgxNH0.42TmIt_4fjFdhaNLIme-mFYW9ihTLP5bO55iSMWRPtk' },
+                    body: JSON.stringify({ prompt })
+                });
+                const d = await res.json();
+                aiMsg.innerHTML = (d.text || "Sin respuesta.").replace(/\n/g, '<br>');
+            } catch (e) { aiMsg.textContent = 'Error de conexión.'; }
+            win.scrollTop = win.scrollHeight;
+        }
+        btn.addEventListener('click', handleChat);
+        input.addEventListener('keypress', e => { if(e.key === 'Enter') handleChat(); });
+    </script>
+</body>
+</html>
